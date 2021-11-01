@@ -43,12 +43,13 @@ namespace Drinks
             this.buttonRefill.TabIndex = 0;
             this.buttonRefill.Text = "Перезаполнить";
             this.buttonRefill.UseVisualStyleBackColor = true;
+            this.buttonRefill.Click += new System.EventHandler(this.buttonRefill_Click);
             // 
             // buttonGet
             // 
-            this.buttonGet.Location = new System.Drawing.Point(169, 26);
+            this.buttonGet.Location = new System.Drawing.Point(183, 26);
             this.buttonGet.Name = "buttonGet";
-            this.buttonGet.Size = new System.Drawing.Size(75, 23);
+            this.buttonGet.Size = new System.Drawing.Size(103, 23);
             this.buttonGet.TabIndex = 1;
             this.buttonGet.Text = "Взять";
             this.buttonGet.UseVisualStyleBackColor = true;
@@ -58,7 +59,7 @@ namespace Drinks
             this.textInfo.Location = new System.Drawing.Point(52, 55);
             this.textInfo.Name = "textInfo";
             this.textInfo.ReadOnly = true;
-            this.textInfo.Size = new System.Drawing.Size(192, 51);
+            this.textInfo.Size = new System.Drawing.Size(234, 51);
             this.textInfo.TabIndex = 2;
             this.textInfo.Text = "";
             // 
@@ -66,7 +67,7 @@ namespace Drinks
             // 
             this.richTextBox2.Location = new System.Drawing.Point(52, 112);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(192, 96);
+            this.richTextBox2.Size = new System.Drawing.Size(234, 96);
             this.richTextBox2.TabIndex = 3;
             this.richTextBox2.Text = "";
             // 
@@ -74,7 +75,7 @@ namespace Drinks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 226);
+            this.ClientSize = new System.Drawing.Size(335, 233);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.textInfo);
             this.Controls.Add(this.buttonGet);
