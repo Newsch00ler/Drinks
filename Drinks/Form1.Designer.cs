@@ -29,13 +29,69 @@ namespace Drinks
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonRefill = new System.Windows.Forms.Button();
+            this.buttonGet = new System.Windows.Forms.Button();
+            this.textInfo = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // buttonRefill
+            // 
+            this.buttonRefill.Location = new System.Drawing.Point(52, 26);
+            this.buttonRefill.Name = "buttonRefill";
+            this.buttonRefill.Size = new System.Drawing.Size(103, 23);
+            this.buttonRefill.TabIndex = 0;
+            this.buttonRefill.Text = "Перезаполнить";
+            this.buttonRefill.UseVisualStyleBackColor = true;
+            // 
+            // buttonGet
+            // 
+            this.buttonGet.Location = new System.Drawing.Point(169, 26);
+            this.buttonGet.Name = "buttonGet";
+            this.buttonGet.Size = new System.Drawing.Size(75, 23);
+            this.buttonGet.TabIndex = 1;
+            this.buttonGet.Text = "Взять";
+            this.buttonGet.UseVisualStyleBackColor = true;
+            // 
+            // textInfo
+            // 
+            this.textInfo.Location = new System.Drawing.Point(52, 55);
+            this.textInfo.Name = "textInfo";
+            this.textInfo.ReadOnly = true;
+            this.textInfo.Size = new System.Drawing.Size(192, 51);
+            this.textInfo.TabIndex = 2;
+            this.textInfo.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(52, 112);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(192, 96);
+            this.richTextBox2.TabIndex = 3;
+            this.richTextBox2.Text = "";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(294, 226);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.textInfo);
+            this.Controls.Add(this.buttonGet);
+            this.Controls.Add(this.buttonRefill);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Автомат напитков";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonRefill;
+        private System.Windows.Forms.Button buttonGet;
+        private System.Windows.Forms.RichTextBox textInfo;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 
