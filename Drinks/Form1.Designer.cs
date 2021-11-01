@@ -32,7 +32,7 @@ namespace Drinks
             this.buttonRefill = new System.Windows.Forms.Button();
             this.buttonGet = new System.Windows.Forms.Button();
             this.textInfo = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.textOut = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // buttonRefill
@@ -53,6 +53,7 @@ namespace Drinks
             this.buttonGet.TabIndex = 1;
             this.buttonGet.Text = "Взять";
             this.buttonGet.UseVisualStyleBackColor = true;
+            this.buttonGet.Click += new System.EventHandler(this.buttonGet_Click);
             // 
             // textInfo
             // 
@@ -63,20 +64,20 @@ namespace Drinks
             this.textInfo.TabIndex = 2;
             this.textInfo.Text = "";
             // 
-            // richTextBox2
+            // textOut
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(52, 112);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(234, 96);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "";
+            this.textOut.Location = new System.Drawing.Point(52, 112);
+            this.textOut.Name = "textOut";
+            this.textOut.Size = new System.Drawing.Size(234, 96);
+            this.textOut.TabIndex = 3;
+            this.textOut.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 233);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.textOut);
             this.Controls.Add(this.textInfo);
             this.Controls.Add(this.buttonGet);
             this.Controls.Add(this.buttonRefill);
@@ -92,7 +93,7 @@ namespace Drinks
         private System.Windows.Forms.Button buttonRefill;
         private System.Windows.Forms.Button buttonGet;
         private System.Windows.Forms.RichTextBox textInfo;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox textOut;
     }
 }
 

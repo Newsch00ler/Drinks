@@ -28,16 +28,31 @@ namespace Drinks
                 switch (rnd.Next() % 3)
                 {
                     case 0: // если 0, то сок
-                        this.drinksList.Add(new Juice());
+                        this.drinksList.Add(Juice.Generate());
                         break;
                     case 1: // если 1 то газировка
-                        this.drinksList.Add(new Soda());
+                        this.drinksList.Add(Soda.Generate());
                         break;
                     case 2: // если 2 то алко
-                        this.drinksList.Add(new Alcohol());
+                        this.drinksList.Add(Alcohol.Generate());
                         break;
                 }
             }
+            ShowInfo();
+        }
+
+        private void buttonGet_Click(object sender, EventArgs e)
+        {
+            if (this.drinksList.Count == 0)
+            {
+                textOut.Text = "Пусто";
+                return;
+            }
+
+            var drink = this.drinksList[0];
+            this.drinksList.RemoveAt(0);
+
+            textOut.Text = drink.GetInfo();
             ShowInfo();
         }
 
