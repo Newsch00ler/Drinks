@@ -15,14 +15,25 @@ namespace Drinks
     public class Drinks
     {
         public int Value = 0;
+        public virtual string GetInfo()
+        {
+            var str = "";
+            str += String.Format("\nОбъем: {0}", this.Value);
+            str += "\n";
+            return str;
+        }
+        public static Random rnd = new Random();
     }
+
+    public enum FruitsType { Orange, Apple, Pear, Peach, Grapes }; // виды cjrf
+
     public class Juice : Drinks
     {
-        public int Fruits = 0; // фрукты
+        public FruitsType type = FruitsType.Orange; // фрукты
         public bool WithPulp = false; // наличие мякоти
     }
 
-    public enum SodaType { Cola, Sprite, Fanta, Baikal, Tarragon, Schweppes };
+    public enum SodaType { Cola, Sprite, Fanta, Baikal, Tarragon, Schweppes }; // виды газировки
 
     public class Soda : Drinks
     {
@@ -31,7 +42,7 @@ namespace Drinks
          
     }
 
-    public enum AlcoType { Vodka, Rum, Champagne, Wine, Whiskey };
+    public enum AlcoType { Vodka, Rum, Champagne, Wine, Whiskey }; // виды алкашки
 
     public class Alcohol : Drinks
     {
